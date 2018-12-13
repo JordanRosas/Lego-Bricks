@@ -12,9 +12,11 @@ const eventListeners = {
       creator: creator,
       name: name,
       shape: shape,
-      color: color
+      color:color
     }
 
     data.postLego(legoObject);
+    data.getColors();
   }
+
 };

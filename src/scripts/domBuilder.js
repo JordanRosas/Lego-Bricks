@@ -17,7 +17,7 @@ const domBuilder = {
         <fieldset>
             <label for="lego__color">Color:</label>
             <select id="lego__color">
-                <option value="Red">Red</option>
+                <option value="${}">Red</option>
                 <option value="Green">Green</option>
                 <option value="Yellow">Yellow</option>
                 <option value="Blue">Blue</option>
