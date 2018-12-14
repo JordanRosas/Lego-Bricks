@@ -10,13 +10,7 @@ const data = {
     })
   },
   getColors(){
-    fetch("http://localhost:8088/colors")
+    return fetch("http://localhost:8088/colors")
       .then(response => response.json())
-      .then(allResponses =>{
-        allResponses.forEach(color =>{
-          console.log(color.name)
-        })
-      })
-  }
-  
+      }
 }

@@ -16,20 +16,36 @@ const domBuilder = {
         </fieldset>
         <fieldset>
             <label for="lego__color">Color:</label>
-            <select id="lego__color">
-                <option value="${}">Red</option>
-                <option value="Green">Green</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Blue">Blue</option>
-                <option value="Orange">Orange</option>
-                <option value="Black">Black</option>
-            </select>
+            <select id="lego__color"></select>
         </fieldset>
             <button class="btn lego__save">Save Lego Creation</button>
         </article>`
-
     let displayContainer = document.querySelector("#display-container");
     displayContainer.innerHTML = inputForm;
+    },
+
+    finalColorFetch(color){
+        //calling the returned fetch
+        data.getColors()
+        //taking the whole response from the JSON
+        .then(allResponse =>{
+            //setting the HTML of the 'dropdown' to an empty string
+            let HTMLcollection = ""
+            //taking the parsed response list and for each - now object
+            allResponse.forEach(color =>{
+                //populating the drop down with options setting the value and color from the "API"
+                HTMLcollection += `<option value = ${color.id}>${color.name}</option>`                
+                console.log(HTMLcollection)
+                console.log(color)
+            })
+            //targeting the select/"drop down" element
+            let colorMenu = document.querySelector("#lego__color");
+            /*because HTMLcollection is a string of HTML
+            we use inner HTMl to update the drop down with the new option tags being 
+            created by the for Each loop*/
+            
+            colorMenu.innerHTML = HTMLcollection
+        })
     }
 }
 

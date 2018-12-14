@@ -1,18 +1,27 @@
 {
   "legos": [
+    
+  ],
+  "colors": [
     {
-      "creator": "Jordan",
-      "name": "Hamilton",
-      "shape": "Hello",
-      "color": "Orange",
-      "id": 1
+      "id": 1,
+      "name": "Red"
     },
     {
-      "creator": "Asia",
-      "name": "Puppy",
-      "shape": "oval",
-      "color": "Green",
-      "id": 2
+      "id": 2,
+      "name": "Green"
+    },
+    {
+      "id": 3,
+      "name": "Yellow"
+    },
+    {
+      "id": 4,
+      "name": "Orange"
+    },
+    {
+      "id": 5,
+      "name": "White"
     }
   ]
 }
