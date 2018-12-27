@@ -34,14 +34,14 @@ const domBuilder = {
             //taking the parsed response list and for each - now object
             allResponse.forEach(color =>{
                 //populating the drop down with options setting the value and color from the "API"
-                HTMLcollection += `<option value = ${color.id}>${color.name}</option>`                
+                HTMLcollection += `<option value = ${color.id}>${color.name}</option>`
                 console.log(HTMLcollection)
                 console.log(color)
             })
             //targeting the select/"drop down" element
             let colorMenu = document.querySelector("#lego__color");
             /*because HTMLcollection is a string of HTML
-            we use inner HTMl to update the drop down with the new option tags being 
+            we use inner HTMl to update the drop down with the new option tags being
             created by the for Each loop*/
             
             colorMenu.innerHTML = HTMLcollection

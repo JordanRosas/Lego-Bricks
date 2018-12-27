@@ -16,6 +16,4 @@ const eventListeners = {
 
     data.postLego(legoObject);
   },
-
-
 };
